@@ -1,0 +1,11 @@
+extends ../layouts/staffMenu
+block content
+    h1 Create Course Category 
+
+    .align-items-center
+        form(action="/staff/createCourseCategory" method="POST")
+            .form-group 
+                label Course Category name
+                input.form-control(name="category", type='text', value= values ? values.code : '') 
+
+            button.btn Create
